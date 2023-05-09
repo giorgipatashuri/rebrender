@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(241, 67, 66, 0.75);
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+  text-align: center;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+  height: 100%;
+}
+.slick-next,
+.slick-prev {
+  background-image: url('../public/assets/arrow.svg') !important;
+  background-repeat: no-repeat !important;
+  text-align: center !important;
+  background-position: center !important;
+  padding: 14px !important;
+  width: 2vw;
+  height: 2vw;
+  cursor: pointer;
+  border: none;
+  border-radius: 5vw;
+  background-color: #fff;
+  z-index: 99 !important;
+  box-shadow: rgb(35 35 35 / 50%) 0px 0px 20px 5px;
+  top: 40%;
+  &:hover {
+    background-color: #fff;
+  }
+}
+.slick-next,
+.slick-prev::before {
+  content: none !important;
+}
+.slick-next::before {
+  content: none !important;
+}
+.slick-prev {
+  transform: rotate(180deg) !important;
+}
+@media screen and (max-width: 700px) {
+  .slick-next,
+  .slick-prev {
+    display: none !important;
+  }
+}
