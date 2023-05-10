@@ -25,10 +25,7 @@ const ProjectsPage = () => {
     <div>
       <div className='bg-black h-16 w-full flex gap-3 items-center'>
         <Link to='/'>
-          <img
-            src='http://rebrander.ge/img/RB%20light.png'
-            className='w-16 h-16 pl-3 cursor-pointer'
-          />
+          <img src='http://rebrander.ge/img/RB%20light.png' className='w-16 h-16 pl-3' />
 
           <svg
             width='20'
