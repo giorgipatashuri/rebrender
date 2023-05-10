@@ -1,9 +1,9 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
-import Slider from "react-slick";
-import { StoreContext } from "../context/AppContext";
-import { data } from "../data.js";
-import Typical from "react-typical";
+import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import Slider from 'react-slick';
+import { StoreContext } from '../context/AppContext';
+import { data } from '../data.js';
+import Typical from 'react-typical';
 
 const Carouselvol = () => {
   const { sectionProjectsRef } = useContext(StoreContext);
@@ -13,9 +13,9 @@ const Carouselvol = () => {
 
     return (
       <img
-        src="../assets/arrow.svg"
+        src='../assets/arrow.svg'
         className={className}
-        style={{ ...style, display: "block" }}
+        style={{ ...style, display: 'block' }}
         onClick={onClick}
       />
     );
@@ -63,22 +63,22 @@ const Carouselvol = () => {
     ],
   };
   return (
-    <div className="container mx-auto pt-24 w-[95%]" ref={sectionProjectsRef}>
-      <div className="flex items-center justify-center w-full">
+    <div className='container mx-auto pt-24 w-[95%]' ref={sectionProjectsRef}>
+      <div className='flex items-center justify-center w-full'>
         <Typical
-          className="text-4xl flex justify-center"
-          steps={["პროექტები", 2000]}
+          className='text-4xl flex justify-center'
+          steps={['პროექტები', 2000]}
           loop={Infinity}
-          wrapper="span"
+          wrapper='span'
         />
-        <Link to="/პროექტები" className=" p-[10px] bg-mainRed text-white">
+        <Link to='/პროექტები' className=' ml-4 p-[10px] bg-mainRed text-white'>
           ნახე ყველა
         </Link>
       </div>
       <Slider {...settings}>
         {data.map((item) => (
-          <div className=" outline-none">
-            <img src={item.img} alt="" />
+          <div className=' outline-none'>
+            <img src={item.img} alt='' />
           </div>
         ))}
       </Slider>
