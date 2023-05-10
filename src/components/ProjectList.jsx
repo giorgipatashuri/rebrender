@@ -18,3 +18,4 @@ const ProjectList = ({ projects }) => {
   ));
 };
 export default ProjectList;
+

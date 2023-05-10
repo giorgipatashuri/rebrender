@@ -1,11 +1,17 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      screens: {
+        xl: "1130px",
+        xl2: "1440px",
+        sm: "310px",
+        sm2: "850px",
+      },
       colors: {
-        mainRed: '#f14342',
-        mainGray: '#f8f8f8', // replace with your desired color code
+        mainRed: "#f14342",
+        mainGray: "#f8f8f8", 
       },
     },
   },
