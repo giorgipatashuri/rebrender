@@ -48,7 +48,7 @@ const Header = () => {
         >
           <Fade left>
             <img
-              src="http://rebrander.ge/img/RB%20light.png"
+              src="../assets/logo.png"
               className="w-16 h-16"
             />
           </Fade>
